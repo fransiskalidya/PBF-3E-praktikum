@@ -1,0 +1,49 @@
+{
+  "mahasiswa": [
+    {
+      "NIM": 140823453,
+      "id": 2,
+      "nama": "Andi",
+      "alamat": "Jl. Menur No. 9 Surabaya",
+      "hp": "081802023523",
+      "angkatan": 2014,
+      "status": "lulus"
+    },
+    {
+      "NIM": 190823453,
+      "id": 3,
+      "nama": "Stella",
+      "alamat": "Jl. Panderman No. 10 Malang",
+      "hp": "081802023523",
+      "angkatan": 2019,
+      "status": "cuti"
+    },
+    {
+      "NIM": 200823453,
+      "id": 4,
+      "nama": "Nindi",
+      "alamat": "Jl. Danau maninjau 100, Malang",
+      "hp": "081802023523",
+      "angkatan": 2014,
+      "status": "lulus"
+    },
+    {
+      "id": 1647011717260,
+      "NIM": "1941720106",
+      "nama": "fransiska",
+      "alamat": "jl kawi no. 129 malang",
+      "hp": "08127281919",
+      "angkatan": "2019",
+      "status": "aktif"
+    },
+    {
+      "id": 5,
+      "NIM": "1941720103",
+      "nama": "Lidya",
+      "alamat": "jl kawi no. 129 malang",
+      "hp": "08127281919",
+      "angkatan": "2019",
+      "status": "aktif"
+    }
+  ]
+}
