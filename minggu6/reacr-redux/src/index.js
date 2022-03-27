@@ -3,16 +3,22 @@ import ReactDOM from 'react-dom';
 // import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
+// import '../node_modules/font-awesome/css/font-awesome.min.css';
 import { Provider } from 'react-redux'
 import { createStore, applyMiddleware, compose } from 'redux'
 import MainReducer from './reducers/MainReducer'
+import Table from "./containers/Table";
+import CreateTodo from "./containers/CreateTodo";
 
 
 const store = compose(window.devToolsExtension ? window.devToolsExtension() : f =>f)(createStore)(MainReducer)
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <CreateTodo />
+    <Table />
   </Provider>,
   document.getElementById('root')
 );
