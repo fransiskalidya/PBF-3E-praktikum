@@ -12,6 +12,8 @@ import MainReducer from './reducers/MainReducer'
 import Table from "./containers/Table";
 import CreateTodo from "./containers/CreateTodo";
 
+// ./react-dom.js
+export {unstable_batchedUpdates} from "react-dom"
 
 const store = compose(window.devToolsExtension ? window.devToolsExtension() : f =>f)(createStore)(MainReducer)
 
