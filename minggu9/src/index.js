@@ -32,7 +32,7 @@ class StateFullComponent extends React.Component{
 // );
 
 ReactDOM.render(
-    <Mahasiswa />,
+    <BlogPost />,
   document.getElementById('content')
 );
 

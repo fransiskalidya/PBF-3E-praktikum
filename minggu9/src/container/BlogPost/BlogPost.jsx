@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import './BlogPost.css';
 import Post from '../../component/BlogPost/Post';
+import API from '../../services/index';
 import { toHaveStyle } from "@testing-library/jest-dom/dist/matchers";
 
 class BlogPost extends Component{
@@ -15,25 +16,22 @@ class BlogPost extends Component{
     }
 
     ambilDataDariServerAPI= ()=>{ //komponen untuk mengecek ketika component telah di mount ing, maka panggil API
-        fetch('http://localhost:3001/posts') // alamat URL yang ingin diambil datanya
-            .then(Response => Response.json())
-            .then(jsonHasilAmbilDariApi =>{ //data json hasil ambil dari API, dimasukkan ke dalam listArtikel pada state
-                this.setState({
-                    listArtikel:jsonHasilAmbilDariApi
-                })
+        API.getNewsBlog().then(result =>{
+            this.setState({
+                listArtikel: result
             })
+        })
     }
 
     componentDidMount(){
         this.ambilDataDariServerAPI()
     }
 
-    handleHapusArtikel = (data)=>{
-        fetch(`http://localhost:3001/posts/${data}`, {method: 'DELETE'})
-            .then(res=>{
-                this.ambilDataDariServerAPI()
-            })
-    }
+    handleHapusArtikel = (data) => {
+        API.deleteNewsBlog(data).then((response) => {
+          this.ambilDataDariSeverAPI();
+        });
+      };
 
     handleTambahArtikel = (event)=>{ //untuk menghandle form tambah data artikel
         let formInsertArtikel = {...this.state.insertArtikel}; //cloning data state insertArtikel ke dalam variabel formInsertArtikel
@@ -46,16 +44,9 @@ class BlogPost extends Component{
     }
 
     handleTombolSimpan = () =>{
-        fetch ('http://localhost:3001/posts', {
-            method : 'post',
-            headers: {
-                'Accept' : 'application/json',
-                'Content-Type' : 'application/json'
-            },
-            body: JSON.stringify(this.state.insertArtikel)      // kirimkan ke body request untuk data artikel yang akan ditambahkan (insert)
-        })
-            .then((Response)=>{
-                this.ambilDataDariServerAPI(); //refresh data
+        API.postNewsBlog(this.state.insertArtikel)
+            .then((reponse)=>{
+                this.ambilDataDariServerAPI();
             })
     }
 
