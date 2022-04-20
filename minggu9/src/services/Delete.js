@@ -6,9 +6,11 @@ const DeleteAPI = (path, data) => {
             method: 'DELETE'
         })
             .then((result) => {
-                resolve(result);                        // jika success menerima response dari server, maka resolve response ke user
+                resolve(result);
+                console.log(result);                        // jika success menerima response dari server, maka resolve response ke user
             }, (err) => {
-                reject(err);                             // jika terjadi error dari server (server down, dll),
+                reject(err);  
+                console.log(err);                           // jika terjadi error dari server (server down, dll),
             })
     })
     return promise;
