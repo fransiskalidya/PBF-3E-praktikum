@@ -55,20 +55,52 @@ class Create extends Component {
                                 Tambah Data Mahasiswa
                             </h3>
                         </div>
-                        <form>
-                        <div class="form-group row">
-                                <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+                        <br></br>
+                        <div class="card">
+                        <div class="card-body">
+                        
+                        <form onSubmit={this.onSubmit}>
+                            <div class="form-group row">
+                                <label for="Nama" class="col-sm-2 col-form-label">Nama</label>
                                 <div class="col-sm-10">
-                                    <input type="password" class="form-control" id="inputPassword" placeholder="Password"/>
+                                    <input type="Nama" name="Nama" onChange={this.onChange} class="form-control" id="Nama" placeholder="Nama"/>
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+                                <label for="Kelas" class="col-sm-2 col-form-label">Kelas</label>
                                 <div class="col-sm-10">
-                                    <input type="password" class="form-control" id="inputPassword" placeholder="Password"/>
+                                    <input type="Kelas" name="Kelas" onChange={this.onChange} class="form-control" id="Kelas" placeholder="Kelas"/>
                                 </div>
                             </div>
+                            <div class="form-group row">
+                                <label for="NIM" class="col-sm-2 col-form-label">NIM</label>
+                                <div class="col-sm-10">
+                                    <input type="NIM" name="NIM" onChange={this.onChange} class="form-control" id="NIM" placeholder="NIM"/>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="Prodi" class="col-sm-2 col-form-label">Prodi</label>
+                                <div class="col-sm-10">
+                                    <input type="Prodi" name="Prodi" onChange={this.onChange} class="form-control" id="Prodi" placeholder="Prodi"/>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="status" class="col-sm-2 col-form-label">status</label>
+                                <div class="col-sm-10">
+                                    <input type="status" name="status" onChange={this.onChange} class="form-control" id="status" placeholder="status"/>
+                                </div>
+                            </div>
+                            <br>
+                            </br>
+                            <div className="container text-left" style={{padding:"0px"}}>
+                            <span className="btn1">
+                                <button type="submit" className="btn btn-success">Submit</button>
+                                <button style={{marginLeft:"10px"}} class="btn btn-secondary"><Link to="/" style={{color:"white"}}>Kembali</Link></button>
+                            </span>
+                        </div>
                         </form>
+                        </div>
+                        </div>
                     </div>
                 </div>
             </div>

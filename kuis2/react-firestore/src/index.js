@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Redirect, Route } from 'react-router-dom';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 import App from './App';
@@ -13,7 +13,7 @@ import Register from './Auth/Register';
 import Index from './components/mahasiswa/Index';
 import EditMhs from './components/mahasiswa/Edit';
 import CreateMhs from './components/mahasiswa/Create';
-
+import ShowMhs from './components/mahasiswa/Show';
 
 
 ReactDOM.render(
@@ -26,10 +26,12 @@ ReactDOM.render(
 
 {/* kuis */}
         <Route exact path='/' component={Index} />
-        <Route path='/login' component={Login} />
+        <Route path='/login'  component={Login}/>
+        {/* <Redirect from='/' to='/login'/> */}
         <Route path='/register' component={Register} />
         <Route path='/editMhs/:id' component={EditMhs} />
         <Route path='/createMhs' component={CreateMhs} />
+        <Route path='/showMhs/:id' component={ShowMhs} />
       </div>
   </Router>,
   document.getElementById('root')

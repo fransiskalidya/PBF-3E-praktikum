@@ -57,6 +57,7 @@ export default class Create extends Component {
                 Data Mahasiswa
               </h3>
             </div>
+            <br></br>
             <h4><Link to="/createMhs" class="btn btn-primary">Tambah Data</Link></h4>
             <table class="table">
               <thead class="thead-dark">
@@ -66,22 +67,22 @@ export default class Create extends Component {
                   <th>Prodi</th>
                   <th>NIM</th>
                   <th>Status</th>
-                  <th>Action</th>
+                  {/* <th>Action</th> */}
                 </tr>
               </thead>
               <tbody>
                 {this.state.mahasiswas.map(mahasiswas =>
                   <tr>
-                    <th>{mahasiswas.Nama}</th>
+                    <th><Link to={`/showMhs/${mahasiswas.key}`}>{mahasiswas.Nama}</Link></th>
                     <td>{mahasiswas.Kelas}</td>
                     <td>{mahasiswas.Prodi}</td>
                     <td>{mahasiswas.NIM}</td>
                     <td>{mahasiswas.status}</td>
-                    <td>
+                    {/* <td>
                     <Link to={`/editMhs/${this.state.key}`} class="btn btn-sm btn-warning">Edit</Link>&nbsp;
                     <button className="btn btn-sm btn-danger"  onClick={this.delete.bind(this, this.state.key)}  data-toggle="modal" data-target="#exampleModalLong">Hapus</button>
 
-                    </td>
+                    </td> */}
                     
                   </tr>
                 )}

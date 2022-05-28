@@ -1,6 +1,7 @@
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/firestore';
-import {getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword} from 'firebase/auth';
+import {getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged,signOut} from 'firebase/auth';
+import { useState,useEffect } from 'react';
 
 
 const settings = {timestampsInSnapshots: true};
@@ -19,9 +20,24 @@ firebase.firestore().settings(settings);
 export default firebase;
 
 const auth = getAuth();
+
 export function register(email, password){
   return createUserWithEmailAndPassword(auth, email, password);
 }
 export function login(email, password){
   return signInWithEmailAndPassword(auth, email, password);
 }
+// export function logout(){
+//   return signOut(auth);
+// }
+
+// export function useAuth(){
+//   const [currentUser, setCurrentUser] = useState();
+
+//   useEffect(()=>{
+//     const unsub = onAuthStateChanged(auth, user => setCurrentUser(user));
+//     return unsub;
+//   },[])
+
+//   return currentUser;
+// }

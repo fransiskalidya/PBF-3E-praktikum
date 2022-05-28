@@ -66,7 +66,7 @@ class Create extends Component {
                 <label for="author">Author:</label>
                 <input type="text" class="form-control" name="author" value={author} onChange={this.onChange} placeholder="Author" />
               </div>
-              <div class="form-group">
+              {/* <div class="form-group">
                 <select class="custom-select" id="inputGroupSelect04">
                   <option selected>Choose...</option>
                   <option value="1">One</option>
@@ -76,7 +76,7 @@ class Create extends Component {
                 <div class="input-group-append">
                   <button class="btn btn-outline-secondary" type="button">Button</button>
                 </div>
-              </div>
+              </div> */}
               <button type="submit" class="btn btn-success">Submit</button>
             </form>
           </div>
