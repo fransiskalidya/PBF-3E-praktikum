@@ -37,7 +37,7 @@ class Create extends Component {
                 Prodi: '',
                 status: ''
             });
-            this.props.history.push("/")
+            this.props.history.push("/home")
         })
             .catch((error) => {
                 console.error("Error adding document: ", error);
@@ -95,7 +95,7 @@ class Create extends Component {
                             <div className="container text-left" style={{padding:"0px"}}>
                             <span className="btn1">
                                 <button type="submit" className="btn btn-success">Submit</button>
-                                <button style={{marginLeft:"10px"}} class="btn btn-secondary"><Link to="/" style={{color:"white"}}>Kembali</Link></button>
+                                <button style={{marginLeft:"10px"}} class="btn btn-secondary"><Link to="/home" style={{color:"white"}}>Kembali</Link></button>
                             </span>
                         </div>
                         </form>

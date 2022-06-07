@@ -25,8 +25,8 @@ ReactDOM.render(
         <Route path='/create' component={Create} />
 
 {/* kuis */}
-        <Route exact path='/' component={Index} />
-        <Route path='/login'  component={Login}/>
+        <Route exact path='/' component={Login} />
+        <Route path='/home'  component={Index}/>
         {/* <Redirect from='/' to='/login'/> */}
         <Route path='/register' component={Register} />
         <Route path='/editMhs/:id' component={EditMhs} />

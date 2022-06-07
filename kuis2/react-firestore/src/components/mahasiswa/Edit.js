@@ -177,7 +177,7 @@ class Edit extends Component {
                                                 style={{ marginLeft: "10px" }}
                                                 class="btn btn-secondary"
                                             >
-                                                <Link to="/" style={{ color: "white" }}>
+                                                <Link to="/home" style={{ color: "white" }}>
                                                     Kembali
                                                 </Link>
                                             </button>

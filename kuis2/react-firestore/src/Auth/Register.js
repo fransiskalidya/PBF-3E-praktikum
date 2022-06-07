@@ -12,7 +12,7 @@ export default function Login(props) {
         try{
         await register(emailRef.current.value,passwordRef.current.value);
         alert("akun berhasil di buat")
-        props.history.push('/login')
+        props.history.push('/')
         } catch(e){
             setError(e.message);
             // alert(error);
@@ -45,7 +45,7 @@ export default function Login(props) {
                                 <button type="button" onClick={handleSubmit} className="btn btn-primary">Register</button></div>
                             <br></br>
                             <p className="forgot-password text-right">
-                                Data telah terdaftar <a href="/login">Login ?</a>
+                                Data telah terdaftar <a href="/">Login ?</a>
                             </p>
                         </div>
                     </div>

@@ -12,7 +12,7 @@ export default function Login(props) {
         try{
         await login(emailRef.current.value,passwordRef.current.value);
         alert("Selamat datang")
-        props.history.push('/')
+        props.history.push('/home')
         } catch(e){
             setError(e.message);
             // alert(error);

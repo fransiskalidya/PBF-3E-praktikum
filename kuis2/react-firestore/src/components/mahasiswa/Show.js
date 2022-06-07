@@ -30,7 +30,7 @@ class Show extends Component {
     delete(id) {
         firebase.firestore().collection('mahasiswas').doc(id).delete().then(() => {
             console.log("Document successfully deleted!");
-            this.props.history.push("/")
+            this.props.history.push("/home")
         }).catch((error) => {
             console.error("Error removing document: ", error);
         });
@@ -70,7 +70,7 @@ class Show extends Component {
                                 <span className="text-left">
                                     <button onClick={this.delete.bind(this, this.state.key)} class="btn btn-danger">Hapus</button>
                                     <button style={{ marginLeft: "10px" }} class="btn btn-warning"><Link to={`/editMhs/${this.state.key}`} style={{ color: "white" }}>Edit</Link></button>
-                                    <button style={{ marginLeft: "10px" }} class="btn btn-success"><Link to={`/`} style={{ color: "white" }}>Kembali</Link></button>
+                                    <button style={{ marginLeft: "10px" }} class="btn btn-success"><Link to={`/home`} style={{ color: "white" }}>Kembali</Link></button>
 
                                 </span>
                             </div>

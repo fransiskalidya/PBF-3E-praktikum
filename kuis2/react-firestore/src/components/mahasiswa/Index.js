@@ -40,7 +40,7 @@ export default class Create extends Component {
   delete(id){
     firebase.firestore().collection('mahasiswas').doc(id).delete().then(()=>{
       console.log("Documment successfully deleted!");
-      this.props.history.push("/")
+      this.props.history.push("/home")
     }).catch((error)=>{
       console.error("Error removing document: ", error);
     })
